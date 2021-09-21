@@ -1,4 +1,4 @@
-package com.zst.week9.q9;
+package com.zst.week7.q9;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

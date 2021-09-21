@@ -1,4 +1,4 @@
-package com.zst.week9.q9.consts;
+package com.zst.week7.q9.consts;
 
 public interface DataSourceName {
     String MASTER = "master";
