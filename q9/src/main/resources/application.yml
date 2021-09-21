@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    master:
+      jdbc-url: jdbc:mysql://127.0.0.1:13306/zst
+      username: root
+      password: 123456
+    slave1:
+      jdbc-url: jdbc:mysql://127.0.0.1:13307/zst
+      username: root
+      password: 123456

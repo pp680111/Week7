@@ -1,0 +1,24 @@
+dataSources:
+  master:
+    driverClassName: com.mysql.jdbc.Driver
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    jdbcUrl: jdbc:mysql://127.0.0.1:13306/zst
+    username: root
+    password: 123456
+  slave1:
+    driverClassName: com.mysql.jdbc.Driver
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    jdbcUrl: jdbc:mysql://127.0.0.1:13307/zst
+    username: root
+    password: 123456
+rules:
+  - !READWRITE_SPLITTING
+    dataSources:
+      mainDataSource:
+        writeDataSourceName: master
+        readDataSourceNames:
+          - slave1
+        loadBalancerName: ROUND_ROBIN
+props:
+  sql-show: true
+  sql-simple: true
